@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_gender_category">
+
+
+    <EditText
+        android:id="@+id/categoryNameEdtTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Category Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ImageURLEdtTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Image URL"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/saveNewCategoryBtn"
+        app:layout_constraintEnd_toEndOf="@+id/categoryNameEdtTxt"
+        app:layout_constraintStart_toStartOf="@+id/categoryNameEdtTxt"
+        app:layout_constraintTop_toBottomOf="@+id/categoryNameEdtTxt" />
+
+    <Button
+        android:id="@+id/saveNewCategoryBtn"
+        style="@style/submitButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/categoryNameWarningTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field cannot be empty."
+        style="@style/warningStyle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/categoryNameEdtTxt"
+        app:layout_constraintStart_toStartOf="@+id/categoryNameEdtTxt" />
+
+    <TextView
+        android:id="@+id/imageURLWarningTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field cannot be empty."
+        style="@style/warningStyle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/ImageURLEdtTxt"
+        app:layout_constraintStart_toStartOf="@+id/ImageURLEdtTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
